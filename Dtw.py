@@ -1,5 +1,5 @@
 from math import *
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import numpy
 
 
@@ -79,7 +79,7 @@ def dtw(s1, s2, dist_func):
         if x == 0 and y == 0:
             break
 
-    # print_matrix(mat)
+    #print_matrix(mat)
 
     return retval, sorted(path)
 
@@ -118,4 +118,4 @@ s2 = [3, 4, 5, 5, 5, 4]
 #s1 = [50.07,62.57,67.29,68.25,62.72,55.59,55.00,56.95,61.73,67.17,72.01]
 #s2 = [50.07,62.57,67.29,68.25,62.72,55.59,55.00,56.95,61.73,67.17,72.01]
 # val, path = dtw(s1, s2, dist_for_float)
-display(s1, s2)
+#display(s1, s2)
