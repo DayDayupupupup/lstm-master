@@ -10,11 +10,11 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 
 # load the dataset
-dataframe = read_csv('train.csv',  engine='python')
+dataframe = read_csv('train.csv',  engine='python',header=None)
 dataset = dataframe.values
 # 将整型变为float
 #dataset = dataset.astype('float32')
-
+print(dataframe)
 plt.plot(dataset)
 plt.show()
 
