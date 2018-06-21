@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import numpy
 import matplotlib.pyplot as plt
 from pandas import read_csv
@@ -10,7 +11,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 
 # load the dataset
-dataframe = read_csv('train.csv',  engine='python',header=None)
+dataframe = read_csv('train.csv', header=None)
 dataset = dataframe.values
 # 将整型变为float
 #dataset = dataset.astype('float32')
@@ -93,6 +94,10 @@ trainPredictPlot[look_back:len(trainPredict)+look_back, :] = trainPredict
 testPredictPlot = numpy.empty_like(dataset)
 testPredictPlot[:, :] = numpy.nan
 testPredictPlot[len(trainPredict)+(look_back*2)+1:len(dataset)-1, :] = testPredict
+dataset_trans = scaler.inverse_transform(dataset)
+print(dataset_trans[len(trainPredict)+(look_back*2)+1:len(dataset)-1, :])
+print("#"*30)
+print(testPredict)
 
 # plot baseline and predictions
 plt.plot(scaler.inverse_transform(dataset))
