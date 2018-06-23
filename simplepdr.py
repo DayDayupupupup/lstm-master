@@ -39,7 +39,7 @@ class PDR(object):
         # Get step length
         stepFreq = stepNum / (edTimeList[-1] - stTimeList[0])
         stepLength = para[4] * stepFreq + para[5]
-        print("Step Num is %d, Step Frequency is %.3f and Step Length is %.4f" % (stepNum, stepFreq, stepLength))
+        #print("Step Num is %d, Step Frequency is %.3f and Step Length is %.4f" % (stepNum, stepFreq, stepLength))
 
         # Get rotation angle
         rotationList = rotationAngle(gyroTimeList, gyroValueList)
@@ -85,11 +85,11 @@ class PDR(object):
 
 if __name__ == "__main__":
 
-    sensorFilePath = ("./data/step_7_4__7_7__11_7__11_4.csv")
+    sensorFilePath = "./data/step_7_4__7_7__11_7__11_4.csv"
     locationFilePath = "./data/step_7_4__7_7__11_7__11_4_route_5.csv"
     estimationFilePath = "./data/step_7_4__7_7__11_7__11_4_estimate.csv"
     routeRotClockWise = "0"
-    moveVector = (3.5,2.0)
+    moveVector = (3.5, 2.0)
 
     real_step = [[7,4],[7,5],[7,6],[7,7],[7,8],[7,9],[7,10],[8,10],[9,10],[10,10],[11,10]]
     true_x, true_y = zip(*real_step)
@@ -108,6 +108,7 @@ if __name__ == "__main__":
     # Get location estimation at global coordination
     myPDR = PDR()
     locEstRelList = myPDR.getLocEstimation(acceTimeList, acceValueList, gyroTimeList, gyroValueList)
+    #print(locEstRelList)
     # From the relative route coordinate to global coordinate
     # locEstWorldList = myPDR.locTransform(locEstRelList, routeRotClockWise, moveVector)
     locEstWorldList = [locTransformR2W(relLoc, moveVector, routeRotClockWise) for relLoc in locEstRelList]
