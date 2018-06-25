@@ -99,7 +99,7 @@ if __name__ == "__main__":
     true_y = (true_y * 0.5).astype(float)
 
     locRealDF = pd.DataFrame(list(zip(true_x, true_y)))
-    #print(locRealDF)
+    print(locRealDF)
 
     # Load sensor data from files
     acceTimeList, acceValueList = loadAcceData(sensorFilePath, relativeTime=False)
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     errorFilePath = "%s_error.csv" % locationFilePath[0:-4]
     errorDF = pd.DataFrame(np.array(errorList), columns=["Error(m)"])
     errorDF.to_csv(errorFilePath, encoding='utf-8', index=False)
-
+    print(errorList)
     print("Average Error Distance is %.3f" % np.mean(errorList))
     # Show the errors
     pdrxMajorLocator = MultipleLocator(10)
