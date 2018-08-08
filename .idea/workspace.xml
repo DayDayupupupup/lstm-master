@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88091db9-f1b0-49ea-b1d4-bbecaeee0bc0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/step_7_4__7_10.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/draw_data/acce_compare.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/draw_data/acce_compare.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/draw_data/mag_compare.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/draw_data/mag_compare.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/muliplane_copy.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/lstm-master.iml" afterPath="$PROJECT_DIR$/.idea/lstm-master.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/drawFigure.py" afterPath="$PROJECT_DIR$/drawFigure.py" />
-      <change beforePath="$PROJECT_DIR$/lstm.h5" afterPath="$PROJECT_DIR$/lstm.h5" />
-      <change beforePath="$PROJECT_DIR$/simplepdr.py" afterPath="$PROJECT_DIR$/simplepdr.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -379,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529761489430</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="FIGURE">
+      <created>1533705168785</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1533705168800</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -420,7 +416,8 @@
     <MESSAGE value="删除一些无用的文件" />
     <MESSAGE value="copy pdr" />
     <MESSAGE value="nothing" />
-    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
+    <MESSAGE value="FIGURE" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIGURE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
