@@ -165,8 +165,8 @@ if __name__ == "__main__":
 
     pdrAxe.plot(range(len(errorList)), errorList, 'r--', lw=2, label="SmartPDR")
 
-    pdrAxe.plot(range(len(fusionErrList)), fusionErrList, 'bs-', lw=2, label="KF+fingerprint")
-    pdrAxe.plot(range(len(geo)), geo, 'g^-', lw=2, label="GeoLoc")
+    #pdrAxe.plot(range(len(fusionErrList)), fusionErrList, 'bs-', lw=2, label="KF+fingerprint")
+    pdrAxe.plot(range(len(geo)), geo, 'g^-', lw=2, label="Our PDR")
 
     plt.legend(loc="best")
     plt.grid()
@@ -190,8 +190,8 @@ if __name__ == "__main__":
     fpAxe.set_xlabel("$Position\ Error(m)$")
     fpAxe.set_ylabel("$Cumulative\ Probability$")
     fpAxe.plot(X1, Y1, 'r--', label="SmartPDR")
-    fpAxe.plot(X2, Y2, 'bs-', label="KF+fingerprint")
-    fpAxe.plot(X3, Y3, 'g^-', label="GeoLoc")
+    #fpAxe.plot(X2, Y2, 'bs-', label="KF+fingerprint")
+    fpAxe.plot(X3, Y3, 'g^-', label="Our PDR")
     # fpAxe.plot(X1, p1(Y1), color="b", label="Fit SmartPDR")
 
     plt.legend(loc="best")
