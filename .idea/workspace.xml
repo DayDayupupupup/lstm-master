@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88091db9-f1b0-49ea-b1d4-bbecaeee0bc0" name="Default" comment="FIGURE">
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/PDR.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/pdr_coordinate.csv" />
+    <list default="true" id="88091db9-f1b0-49ea-b1d4-bbecaeee0bc0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/data/0-18.csv" afterPath="$PROJECT_DIR$/data/0-18.csv" />
-      <change beforePath="$PROJECT_DIR$/data/1-18.csv" afterPath="$PROJECT_DIR$/data/1-18.csv" />
-      <change beforePath="$PROJECT_DIR$/data/2-18.csv" afterPath="$PROJECT_DIR$/data/2-18.csv" />
-      <change beforePath="$PROJECT_DIR$/data/3-18.csv" afterPath="$PROJECT_DIR$/data/3-18.csv" />
-      <change beforePath="$PROJECT_DIR$/data/4_18.csv" afterPath="$PROJECT_DIR$/data/4_18.csv" />
-      <change beforePath="$PROJECT_DIR$/data/5_18.csv" afterPath="$PROJECT_DIR$/data/5_18.csv" />
-      <change beforePath="$PROJECT_DIR$/drawFigure.py" afterPath="$PROJECT_DIR$/drawFigure.py" />
-      <change beforePath="$PROJECT_DIR$/lstm.h5" afterPath="$PROJECT_DIR$/lstm.h5" />
-      <change beforePath="$PROJECT_DIR$/muliplane_copy.py" afterPath="$PROJECT_DIR$/muliplane_copy.py" />
-      <change beforePath="$PROJECT_DIR$/plots.png" afterPath="$PROJECT_DIR$/plots.png" />
-      <change beforePath="$PROJECT_DIR$/simplepdr.py" afterPath="$PROJECT_DIR$/simplepdr.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -461,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533705247692</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix">
+      <created>1535118712269</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1535118712269</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -525,7 +519,8 @@
     <MESSAGE value="copy pdr" />
     <MESSAGE value="nothing" />
     <MESSAGE value="FIGURE" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIGURE" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
