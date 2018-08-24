@@ -85,13 +85,17 @@ class PDR(object):
 
 if __name__ == "__main__":
 
-    sensorFilePath = "./data/step_7_4__7_7__11_7__11_4.csv"
-    locationFilePath = "./data/step_7_4__7_7__11_7__11_4_route_5.csv"
-    estimationFilePath = "./data/step_7_4__7_7__11_7__11_4_estimate.csv"
+    #sensorFilePath = "./data/step_7_4__7_7__11_7__11_4.csv"
+    #locationFilePath = "./data/step_7_4__7_7__11_7__11_4_route_5.csv"
+    #estimationFilePath = "./data/step_7_4__7_7__11_7__11_4_estimate.csv"
+    sensorFilePath = "./data/pdr.csv"
+    locationFilePath = "./data/pdr_coordinate.csv"
+    estimationFilePath = "./data/pdr_estimate.csv"
     routeRotClockWise = "0"
     moveVector = (3.5, 2.0)
 
-    real_step = [[7,4],[7,5],[7,6],[7,7],[7,8],[7,9],[7,10],[8,10],[9,10],[10,10],[11,10]]
+    #real_step = [[7,4],[7,5],[7,6],[7,7],[7,8],[7,9],[7,10],[8,10],[9,10],[10,10],[11,10]]
+    real_step = [[7, 4], [7, 5], [7, 6], [7, 7], [7, 8], [7, 9], [7, 10], [8, 10]]
     true_x, true_y = zip(*real_step)
     true_x = np.array(true_x)
     true_y = np.array(true_y)
@@ -165,7 +169,7 @@ if __name__ == "__main__":
 
     pdrAxe.plot(range(len(errorList)), errorList, 'r--', lw=2, label="SmartPDR")
 
-    #pdrAxe.plot(range(len(fusionErrList)), fusionErrList, 'bs-', lw=2, label="KF+fingerprint")
+    pdrAxe.plot(range(len(fusionErrList)), fusionErrList, 'bs-', lw=2, label="KF+fingerprint")
     pdrAxe.plot(range(len(geo)), geo, 'g^-', lw=2, label="Our PDR")
 
     plt.legend(loc="best")
@@ -182,7 +186,7 @@ if __name__ == "__main__":
     X2 = np.concatenate((X2, [ 0.74379376,  0.38,  0.299]), axis=0)
 
     Y2 = np.concatenate((Y2, [ 0.41,  0.35,  0.21379376]), axis=0)
-    # np.append(Y2, [ 0.41,  0.35,  0.21379376])
+    np.append(Y2, [ 0.41,  0.35,  0.21379376])
     print(X2, Y2)
     print(X3, Y3)
     fig = plt.figure()
@@ -190,9 +194,9 @@ if __name__ == "__main__":
     fpAxe.set_xlabel("$Position\ Error(m)$")
     fpAxe.set_ylabel("$Cumulative\ Probability$")
     fpAxe.plot(X1, Y1, 'r--', label="SmartPDR")
-    #fpAxe.plot(X2, Y2, 'bs-', label="KF+fingerprint")
+    fpAxe.plot(X2, Y2, 'bs-', label="KF+fingerprint")
     fpAxe.plot(X3, Y3, 'g^-', label="Our PDR")
-    # fpAxe.plot(X1, p1(Y1), color="b", label="Fit SmartPDR")
+    fpAxe.plot(X1, p1(Y1), color="b", label="Fit SmartPDR")
 
     plt.legend(loc="best")
     plt.grid()

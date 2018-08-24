@@ -53,10 +53,10 @@ def get_data(path_to_dataset='df.csv', sequence_length=SEQ_LENGTH, stateful=Fals
     fold_index = 1
     ###
     dtypes = {'accelerator_x': 'float', 'accelerator_y': 'float', 'accelerator_z': 'float',
-            'magnetic_x': 'float', 'magnetic_y': 'float', 'magnetic_z': 'float',
-            'orientation_x': 'float', 'orientation_y': 'float', 'orientation_z': 'float',
-            'gyroscope_x': 'float', 'gyroscope_y': 'float', 'gyroscope_z': 'float',
-            'step': 'int'}
+              'magnetic_x': 'float', 'magnetic_y': 'float', 'magnetic_z': 'float',
+              'orientation_x': 'float', 'orientation_y': 'float', 'orientation_z': 'float',
+              'gyroscope_x': 'float', 'gyroscope_y': 'float', 'gyroscope_z': 'float',
+              'step': 'int','posX':'int','posY':'int'}
     # parse_dates = ['date']
     print(path_to_dataset)
     df = pd.read_csv(DATAPATH+path_to_dataset, header = 0,  dtype=dtypes ,quotechar='"',encoding="utf-8")
@@ -112,8 +112,8 @@ def get_data(path_to_dataset='df.csv', sequence_length=SEQ_LENGTH, stateful=Fals
     X_train = np.column_stack((df['accelerator_x'],df['accelerator_y'],df['accelerator_z'],
                 df['magnetic_x'],df['magnetic_y'],df['magnetic_z'],
                 df['orientation_x'],df['orientation_y'],df['orientation_z'],
-                df['gyroscope_x'],df['gyroscope_y'],df['gyroscope_z'],
-                df['timestamp']
+                df['gyroscope_x'],df['gyroscope_y'],df['gyroscope_z']
+
         ))
     Y_train = df['step'].as_matrix()
     print(Y_train.shape)
@@ -439,7 +439,7 @@ def run_regressor(model=LSTM2, data=None, data_file = 'df_dh.csv', isload_model 
 
 if __name__ == '__main__':
     X_train, y_train, X_test, y_test, X_val, Y_val = get_data(sequence_length=SEQ_LENGTH, stateful=STATEFUL, path_to_dataset='step_7_4__7_10.csv')
-    run_regressor(data = [X_train, y_train, X_test, y_test, X_val, Y_val],data_file = 'step_7_4__7_10.csv', isload_model=False)
+    run_regressor(data = [X_train, y_train, X_test, y_test, X_val, Y_val],data_file = '0-18.csv', isload_model=False)
     # bX_train, by_train, bX_test, by_test, bX_val, bY_val = get_data(sequence_length=SEQ_LENGTH, stateful=STATEFUL, path_to_dataset='bombNew.csv')
     #print(bX_test.shape)
     print(X_test.shape)
