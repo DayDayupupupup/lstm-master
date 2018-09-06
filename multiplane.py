@@ -454,7 +454,7 @@ def run_regressor(model=LSTM2, data=None, data_file = 'df_dh.csv', isload_model 
 
 if __name__ == '__main__':
     X_train, y_train, X_test, y_test, X_val, Y_val = get_data(sequence_length=SEQ_LENGTH, stateful=STATEFUL, path_to_dataset='step_7_4__7_10.csv')
-    run_regressor(data = [X_train, y_train, X_test, y_test, X_val, Y_val],data_file = 'step_7_4__7_10.csv', isload_model=False)
+    run_regressor(data = [X_train, y_train, X_test, y_test, X_val, Y_val],data_file = '/', isload_model=False)
     # bX_train, by_train, bX_test, by_test, bX_val, bY_val = get_data(sequence_length=SEQ_LENGTH, stateful=STATEFUL, path_to_dataset='bombNew.csv')
     print(bX_test.shape)
     print(X_test.shape)
