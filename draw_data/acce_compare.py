@@ -21,3 +21,4 @@ plt.legend(['MI 6', 'Galaxy S8'],loc = 'upper right')
 plt.legend(fontproperties=zhfont1)
 plt.savefig("加速度比较.png")
 plt.show()
+
