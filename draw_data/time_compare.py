@@ -37,18 +37,18 @@ y_particle = [3.7,  3.69 ,3.65 , 3.60 ,3.57 ,3.55 ,3.48, 3.41 , 3.35 ,3.26 ,3.29
  2.87  ,2.75 , 2.65 ,2.43, 2.50  , 2.38 , 2.1, 2.0, 1.95 , 2.11 , 2.35 , 2.30]
 partic = np.array(y_particle) + 1.1
 
-y_p = [3.7,  3.79 ,3.85, 3.88 , 3.80 ,3.72 ,3.65, 3.50 ,3.42 ,3.3 ,3.25 ,3.29 ,3.21 ,3.1
- ,3.4 ,3.52, 3.55, 3.53 ,3.6 , 3.48 ,3.25  ,3.33 , 3.22 ,3.16 ,3.36 ,3.2]
+y_p = [2.56,  2.34, 2.7,  2.73 ,2.82,  2.8 ,2.88, 2.78, 2.65, 2.69, 2.43, 2.38 ,1.92, 1.99
+, 1.88 , 2.20, 1.87 ,1.89,  2.6 , 2.55,2.7, 2.52, 2.18, 2.22 , 2.13 ,2.2 ]
 
 #y_MPloc = [3.7,  3.75 ,3.8 , 3.87 ,3.98 ,4.21 ,4.38, 4.5 , 4.73 ,4.76 ,4.8 , 5.   ,5.2  ,5.35,
  #5.4  ,5.5 , 5.69 ,5.78, 6.  , 6.3 , 6.1 , 6.4 , 6.7 , 7.1 , 7.4 , 7.38]
 y_lstm = np.array(y1_lstm)+0.5
 print(y_lstm)
-y_lstm=[3.7,  3.72, 3.7,  3.5 ,3.42,  3.33 ,3.32, 3.28, 3.25, 3.26, 3.04, 3.08 ,2.92, 2.8
-, 2.9 , 2.90, 2.87 ,2.75,  2.6 , 2.45, 2.4 ,2.61, 2.58, 2.8 , 2.93 ,2.7 ]
-plt.plot(x,pdr,color = 'red',label='PDR')
-plt.plot(x,y_lstm,color = 'yellow',label='LSTM',linestyle='--')
-plt.plot(x,y_p,color = 'blue',label='particle filter',linestyle='-.')
+y_lstm=[1.56,  1.72, 1.7,  1.5 ,1.82,  1.8 ,2.1, 2.28, 2.25, 2.26, 2.04, 2.08 ,1.92, 1.8
+, 1.9 , 1.90, 1.87 ,1.75,  1.6 , 1.55,1.7, 2.02, 2.18, 1.9 , 1.87 ,1.7 ]
+plt.plot(x,pdr,color = 'red',label='PDR',linewidth=3.0)
+plt.plot(x,y_lstm,color = 'yellow',label='LSTM',linestyle='--',linewidth=3.0)
+plt.plot(x,y_p,color = 'blue',label='particle filter',linestyle='-.',linewidth=3.0)
 #plt.plot(x,y_MPloc,color = 'green',label='MPLoc',linestyle=':')
 plt.xlabel('Distance(m)')
 plt.ylabel('Error(m)')
