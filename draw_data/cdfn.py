@@ -55,7 +55,7 @@ plt.xlim(0, 10)
 plt.show()
 '''
 #实验室
-'''
+
 x = np.linspace(0,10,35)
 lms=[0,15,23,38,56,74,88,93,97,100,100,100,100,100,100,100,100,100
     , 100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100]
@@ -66,15 +66,16 @@ pdr=[0,5,11,15,26,35,40,47,50,54.2,66.7,72.4,76,79,83.2,86.5,89,92.1
 wifi=[0,3,7.2,11.3,14,18,22,25,31,35,38,47,50,54.6,58.4,64.3,67.8,73.6
     , 77.3,81.1,84.4,87.4,90.7,93,94,95,96,97,98,99,100,100,100,100,100]
 
-plt.plot(x,wifi,label='WIFI',marker='.')
-plt.plot(x,particle,label='粒子滤波',marker='^')
+plt.plot(x,wifi,label='WiLoc',marker='.')
+plt.plot(x,particle,label='MaLoc',marker='^')
 plt.plot(x,lms,label='LmsLoc',marker='1')
-plt.plot(x,pdr,label='PDR',marker='<')
+plt.plot(x,pdr,label='SmartPDR',marker='<')
 plt.xlabel('定位误差（m）',fontproperties=zhfont1)
 plt.ylabel('CDF（%）',fontproperties=zhfont1)
 plt.legend(loc = 'lower right',prop=zhfont1)
 plt.xlim(0, 10)
 plt.show()
+
 '''
 #dating
 x = np.linspace(0,10,35)
@@ -87,12 +88,13 @@ pdr=[0,5,11,15,26,35,40,47,50,54.2,66.7,72.4,76,79,83.2,86.5,89,92.1
 wifi=[0,2,5.2,9.3,12,16,20,22,25,30,33,42,45,47.6,48.4,54.3,57.8,63.6
     , 67.3,71.1,74.4,77.4,80.7,83,84,90,96,97,98,99,100,100,100,100,100]
 
-plt.plot(x,wifi,label='WIFI',marker='.')
-plt.plot(x,particle,label='粒子滤波',marker='^')
+plt.plot(x,wifi,label='WiLoc',marker='.')
+plt.plot(x,particle,label='MaLoc',marker='^')
 plt.plot(x,lms,label='LmsLoc',marker='1')
-plt.plot(x,pdr,label='PDR',marker='<')
+plt.plot(x,pdr,label='SmartPDR',marker='<')
 plt.xlabel('定位误差（m）',fontproperties=zhfont1)
 plt.ylabel('CDF（%）',fontproperties=zhfont1)
 plt.legend(loc = 'lower right',prop=zhfont1)
 plt.xlim(0, 10)
 plt.show()
+'''
