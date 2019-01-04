@@ -20,10 +20,10 @@ for i in range(10,51):
         dataset[i][1]=dataset[i][1]+2
     Y.append(dataset[i][1])
     i = i+1
-plt.plot(X,label="采样点数目",linestyle='-.',color='r')
-plt.plot(Y,label="采样点数目",linestyle='--',color='g')
-plt.xlabel("采样点数目", fontproperties=zhfont1)
-plt.ylabel("加速度计读数(m/s²)", fontproperties=zhfont1)
-plt.legend(['步长80cm', '步长60cm'],loc = 'upper right',prop=zhfont1)
+plt.plot(X,label="Number of sampling points",linestyle='-.',color='r')
+plt.plot(Y,label="Number of sampling points",linestyle='--',color='g')
+plt.xlabel("Number of sampling points")
+plt.ylabel("Accelerometer reading(m/s²)")
+plt.legend(['step length:80cm', 'step length:60cm'],loc = 'upper right',prop=zhfont1)
 plt.savefig("步长比较.png")
 plt.show()

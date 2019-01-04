@@ -10,7 +10,7 @@ data = [[0.3,0.2,0.2,0.25],
         [1.2,0.9,2.0,0.4],
         [1.8,0.7,2.9,0.8]]
 
-df = pd.DataFrame((data),columns=['LmsLoc', 'PDR', 'PF', 'WIFI'])
+df = pd.DataFrame((data),columns=['LmsLoc', 'SmartPDR', 'MaLoc', 'WiLoc'])
 df.boxplot() #也可用plot.box()
-plt.ylabel('定位时间（s）',fontproperties=zhfont1)
+plt.ylabel('Time(s)')
 plt.show()

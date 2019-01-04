@@ -22,18 +22,18 @@ cor=[13,15,22,55,77,80,85,87,90,91,95,98,100,100,100,100,100,100
 hall=[7,10,20,35,38,42,45,47,48.7,51.3,55,58,62.7,66.8,70.1,73.5,76.2,80
     , 82,83,84.3,87.4,90.7,93.2,96.5,99.1,100,100,100,100,100,100,100,100,100]
 
-plt.plot(x,hall,label='大厅',marker='.')
-plt.plot(x,cor,label='走廊',marker='^')
-plt.plot(x,lab,label='实验室',marker='1')
-plt.plot(x,clm,label='教室',marker='<')
-plt.xlabel('定位误差（m）',fontproperties=zhfont1)
-plt.ylabel('CDF（%）',fontproperties=zhfont1)
-plt.legend(loc = 'lower right',prop=zhfont1)
+plt.plot(x,hall,label='Hall',marker='.')
+plt.plot(x,cor,label='Corridor',marker='^')
+plt.plot(x,lab,label='Lab',marker='1')
+plt.plot(x,clm,label='Classroom',marker='<')
+plt.xlabel('Error(m)')
+plt.ylabel('CDF(%)')
+plt.legend(loc = 'lower right')
 plt.xlim(0, 10)
 plt.show()
 '''
 # Generate CDFs with kalman
-'''
+
 x = np.linspace(0,10,35)
 lab=[23,62,81,84,86,89.3,90.7,93,97,100,100,100,100,100,100,100,100,100
     , 100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100]
@@ -44,18 +44,18 @@ cor=[13,16,26,55,77,80,85,87,90,91,95,98,100,100,100,100,100,100
 hall=[8,12,20,34,37.5,45,47.3,52.5,58.4,64.2,68.4,74.3,77.7,80.8,83.1,84.5,87.3,91.6
     , 94.4,96.2,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100]
 
-plt.plot(x,hall,label='大厅',marker='.')
-plt.plot(x,cor,label='走廊',marker='^')
-plt.plot(x,lab,label='实验室',marker='1')
-plt.plot(x,clm,label='教室',marker='<')
-plt.xlabel('定位误差（m）',fontproperties=zhfont1)
-plt.ylabel('CDF（%）',fontproperties=zhfont1)
-plt.legend(loc = 'lower right',prop=zhfont1)
+plt.plot(x,hall,label='Hall',marker='.')
+plt.plot(x,cor,label='Corridor',marker='^')
+plt.plot(x,lab,label='Lab',marker='1')
+plt.plot(x,clm,label='Classroom',marker='<')
+plt.xlabel('Error(m)')
+plt.ylabel('CDF(%)')
+plt.legend(loc = 'lower right')
 plt.xlim(0, 10)
 plt.show()
-'''
-#实验室
 
+#实验室
+'''
 x = np.linspace(0,10,35)
 lms=[0,15,23,38,56,74,88,93,97,100,100,100,100,100,100,100,100,100
     , 100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100]
@@ -70,12 +70,12 @@ plt.plot(x,wifi,label='WiLoc',marker='.')
 plt.plot(x,particle,label='MaLoc',marker='^')
 plt.plot(x,lms,label='LmsLoc',marker='1')
 plt.plot(x,pdr,label='SmartPDR',marker='<')
-plt.xlabel('定位误差（m）',fontproperties=zhfont1)
-plt.ylabel('CDF（%）',fontproperties=zhfont1)
-plt.legend(loc = 'lower right',prop=zhfont1)
+plt.xlabel('Error(m)')
+plt.ylabel('CDF(%)')
+plt.legend(loc = 'lower right')
 plt.xlim(0, 10)
 plt.show()
-
+'''
 '''
 #dating
 x = np.linspace(0,10,35)
